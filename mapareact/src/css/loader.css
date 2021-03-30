@@ -1,0 +1,31 @@
+.loader {
+    display: inline-block;
+    border-radius: 3px;
+    position: relative;
+    transition: .3s color, .3s border, .3s transform, .3s opacity;
+}
+
+.loader span {
+    display: none;
+}
+
+
+.loader::after {
+    content: '';
+    border: 2px solid;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    animation: 1s loader linear infinite;
+    width: 8px;
+    height: 8px;
+    display:inline-block;
+}
+
+@keyframes loader {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

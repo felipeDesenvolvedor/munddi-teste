@@ -3,8 +3,10 @@ import Form from "./Form/Form"
 import Button from "./Button/Button"
 import Input from "./Input/Input"
 import fetchStoresInTheRegion from "../API"
-import {userLatLng, addMap, addMarker, infowindow, svgMarker} from "../utils" 
+// eslint-disable-next-line no-unused-vars
+import {Loader, userLatLng, addMap, addMarker, infowindow, svgMarker} from "../utils" 
 import Listadress from "./Listadress/Listadress"
+import Wrapper from "./Wrapper/Wrapper"
 
 
 
@@ -24,7 +26,7 @@ class Components extends React.Component{
 
 	handleButton () {
 		const inputSearch = document.querySelector("#searchAdress")
-		
+
 		if(!inputSearch.value) {
 			return
 		}
@@ -97,14 +99,15 @@ class Components extends React.Component{
 	render() {
 		return (
 			<>
-				<Form className="form__search" onSubmit={this.handleForm}>
-					<Input id={"searchAdress"} type={"text"} placeholder={"Pesquisar Endere"} />
-					<Button id={"btnSearchAddress"} text={"Buscar"} onClick={this.handleButton} />
-				</Form>
-
 				<div id="map"></div>
 				
-				<Listadress windowList={this.state.windows} stateList={this.state.lojas} />
+				<Wrapper>
+					<Form className="form__search" onSubmit={this.handleForm}>
+						<Input id={"searchAdress"} type={"text"} placeholder={"Pesquise no google maps"} />
+						<Button id={"btnSearchAddress"} onClick={this.handleButton} />
+					</Form>
+					<Listadress windowList={this.state.windows} stateList={this.state.lojas} />	
+				</Wrapper>
 			</>
 		)
 	}

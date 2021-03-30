@@ -62,4 +62,8 @@ const svgMarker = () => ({
 })
   
 
-export {userLatLng, addMap, addMarker, infowindow, svgMarker}
+const Loader = (element, className) => {
+	element.classList.toggle(className)
+}
+
+export {Loader, userLatLng, addMap, addMarker, infowindow, svgMarker}

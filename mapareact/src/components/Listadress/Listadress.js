@@ -4,14 +4,26 @@ import styled from "styled-components"
 
 // eslint-disable-next-line no-unused-vars
 const ListaStyled = styled.ul`
-   list-style: none;
+	overflow-x: scroll;
+	overflow-y:scroll;
+
+    list-style: none;
     background: #fff;
-    position: absolute;
-    top: 200px;
-    overflow-y: scroll;
-    max-height: 50vh;
-    padding: 32px;
-    left: 20px;
+    max-height: 100%;
+    padding: 0 10px;
+
+	& {
+		li {
+			margin-top:20px;
+			cursor:pointer;
+		}
+
+		li:last-child {
+			margin-bottom:20px;
+		}
+
+		li{}
+	}
 `
 
 
@@ -30,16 +42,13 @@ class Listadress extends React.Component {
 	toggleInfoWindow() {
 		let index = parseInt(event.target.getAttribute("index"))
 
+		if(!index) {
+			return
+		}
+
 		let infowindowMarker = this.props.windowList[index].infowindowMarker
 		let map = this.props.windowList[index].map
 		let marker = this.props.windowList[index].marker
-
-		console.log(infowindowMarker)
-		console.log(map)
-		console.log(marker)
-		console.log(index)
-		
-
 
 		if(!event.target.classList.contains("selected")) {
 			

@@ -1,10 +1,9 @@
 import styled from "styled-components"
 
 const Form = styled.form`
-    position:absolute;
-    top:calc(40px + 60px);
-    z-index: 2;
-    left: 9px;   
+    display:flex;
+    justify-content:space-between;
+    width:100%;
 `
 
 export default Form
