@@ -1,5 +1,3 @@
-import fetchStoresInTheRegion from "./API"
-
 const userLatLng = resultsAddress => {
 	return {lat:resultsAddress[0].geometry.location.lat(), lng:resultsAddress[0].geometry.location.lng()}
 }
@@ -8,6 +6,8 @@ const addMap = UserLatLng => {
 	return new window.google.maps.Map(document.getElementById("map"), {
 		center: UserLatLng,
 		zoom:12,
+		mapTypeId:"roadmap",
+		mapTypeControl: false,
 	})
 }
   
@@ -60,39 +60,6 @@ const svgMarker = () => ({
 	scale: 2,
 	anchor: new window.google.maps.Point(15, 30),
 })
+  
 
-  
-// eslint-disable-next-line no-unused-vars
-const buildComponentMap = (results, status) => {
-	const UserLatLng = userLatLng(results)
-	const map        = addMap(UserLatLng)
-	addMarker(UserLatLng, map)
-    
-	setTimeout(() => {
-  
-		fetchStoresInTheRegion(map)
-			.then(lojas => {
-				lojas.data.forEach(loja => {
-					let storeLatLng = {lat:parseFloat(loja.lat), lng:parseFloat(loja.lng)}
-					let marker = addMarker(storeLatLng, map, svgMarker())
-  
-					const infowindowMarker = infowindow({
-						name:loja.name, street:loja.street, city:loja.city, lat:loja.lat, lng:loja.lng
-					})
-  
-					marker.addListener("click", () => {
-						infowindowMarker.open(map, marker)
-					})
-				})
-			})
-  
-	}, 1000)
-}
-  
-const searchForGeocoder = address => {
-	const geocoder = new window.google.maps.Geocoder()
-	geocoder.geocode({address}, (results, status) => buildComponentMap(results, status))
-}
-
-
-export {searchForGeocoder}
+export {userLatLng, addMap, addMarker, infowindow, svgMarker}
