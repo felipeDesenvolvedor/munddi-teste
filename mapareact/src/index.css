@@ -17,3 +17,11 @@ code {
   display:flex;
   flex-direction:column;
 }
+
+.hamburguer {
+  background: #5ec5ec url("./img/bars-solid.svg") no-repeat center / 17px !important;
+  position: absolute;
+  right: -71px;
+  height: 40px;
+  width: 50px !important;
+}

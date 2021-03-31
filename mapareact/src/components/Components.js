@@ -102,6 +102,7 @@ class Components extends React.Component{
 				<div id="map"></div>
 				
 				<Wrapper>
+					<Button id={"btnHamburguer"} className="hamburguer" onClick={this.handleHamburguer} ></Button>
 					<Form className="form__search" onSubmit={this.handleForm}>
 						<Input id={"searchAdress"} type={"text"} placeholder={"Pesquise um endereço"} />
 						<Button id={"btnSearchAddress"} onClick={this.handleButton} ><i className="fa fa-search"></i></Button>
