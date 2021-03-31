@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Map</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet"/>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <style type="text/css">
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+        width: 100%;
+      }
+
+      /* Optional: Makes the sample page fill the window. */
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+
+    <link rel="stylesheet" href="./css/index.css"/>
+    <link rel="stylesheet" href="./css/lista-adress.css"/>
+    <link rel="stylesheet" href="./css/loader.css"/>
+
+  </head>
+  <body>
+    
+    <div id="map"></div>
+    
+    <div class="wrapper-listaAdress">
+      <button id="btnHamburguer" class="hamburguer button"></button>  
+      <form class="form__search">
+        <input id="searchAdress" type="text" placeholder="Pesquise um endereço" />
+        <button id="btnSearchAddress" class="button"><i class="fa fa-search"></i></button>
+      </form>
+
+      <ul class="lista-adress"></ul>
+
+    </div>
+    
+    <script src="./js/initMap.js"></script>
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCu4Dq01CVhSMJwLYTP-p2C-wCTtfVsxH0&libraries=&v=weekly"
+    ></script>
+  </body>
+</html>

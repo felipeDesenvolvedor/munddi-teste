@@ -1,0 +1,30 @@
+ul{
+overflow-x: scroll;
+overflow-y:scroll;
+
+list-style: none;
+background: #fff;
+max-height: 100%;
+padding: 0 10px;
+margin-top:4px;
+}
+
+li {
+    margin-top:20px;
+    cursor:pointer;
+}
+
+li:last-child {
+    margin-bottom:20px;
+}
+
+
+.wrapper-listaAdress {
+    display:flex;
+    flex-direction:column;
+    position: absolute;
+    z-index: 2;
+    height: calc(100vh - 20px);
+    top: 20px;
+    left: 20px;
+}
