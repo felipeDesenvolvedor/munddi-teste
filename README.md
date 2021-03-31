@@ -6,5 +6,5 @@ Para realizar os devidos testes do projeto em ReactJS, realize os seguintes pass
 <ul>
 <li>Entrar na pasta (mapareact)</li>
 <li>Executar o comando npm install</li>
-<li>Após a instalação, executar o comando npm run start</li>
+<li>Após a instalação, executar o comando npm run star</li>
 </ul>
