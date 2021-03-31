@@ -5,7 +5,7 @@ const Wrapper = styled.div`
     flex-direction:column;
     position: absolute;
     z-index: 2;
-    height: 50vh;
+    height: calc(100vh - 20px);
     top: 20px;
     left: 20px;
     width:300px;

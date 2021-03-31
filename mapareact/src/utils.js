@@ -22,7 +22,8 @@ const addMarker = (UserLatLng, map, icon = null) => {
 const templateInfoWindow = ({name, street, city, lat, lng}) => {
    
 	const containerInfoWindow = document.createElement("div")
-  
+	containerInfoWindow.classList.add("info-window")	
+	
 	const nameElement = document.createElement("h2")
 	const streetElement = document.createElement("span")
 	const cityElement = document.createElement("span")

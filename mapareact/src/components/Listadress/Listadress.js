@@ -10,7 +10,8 @@ const ListaStyled = styled.ul`
     list-style: none;
     background: #fff;
     max-height: 100%;
-    padding: 0 10px;
+	padding: 0 10px;
+	margin-top:4px;
 
 	& {
 		li {

@@ -103,8 +103,8 @@ class Components extends React.Component{
 				
 				<Wrapper>
 					<Form className="form__search" onSubmit={this.handleForm}>
-						<Input id={"searchAdress"} type={"text"} placeholder={"Pesquise no google maps"} />
-						<Button id={"btnSearchAddress"} onClick={this.handleButton} />
+						<Input id={"searchAdress"} type={"text"} placeholder={"Pesquise um endereço"} />
+						<Button id={"btnSearchAddress"} onClick={this.handleButton} ><i className="fa fa-search"></i></Button>
 					</Form>
 					<Listadress windowList={this.state.windows} stateList={this.state.lojas} />	
 				</Wrapper>
