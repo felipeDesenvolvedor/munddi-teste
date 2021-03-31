@@ -96,12 +96,16 @@ class Components extends React.Component{
 		this.searchForGeocoder("Avenida Paulista")
 	}
 
+	handleHamburguer() {
+		document.querySelector(".wrapper-listaAdress").classList.toggle("aberto")
+	}
+
 	render() {
 		return (
 			<>
 				<div id="map"></div>
 				
-				<Wrapper>
+				<Wrapper className="wrapper-listaAdress">
 					<Button id={"btnHamburguer"} className="hamburguer" onClick={this.handleHamburguer} ></Button>
 					<Form className="form__search" onSubmit={this.handleForm}>
 						<Input id={"searchAdress"} type={"text"} placeholder={"Pesquise um endereço"} />

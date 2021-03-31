@@ -8,7 +8,6 @@ const Wrapper = styled.div`
     height: calc(100vh - 20px);
     top: 20px;
     left: 20px;
-    width:300px;
 `
 
 export default Wrapper

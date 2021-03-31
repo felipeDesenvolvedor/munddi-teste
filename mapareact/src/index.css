@@ -21,7 +21,21 @@ code {
 .hamburguer {
   background: #5ec5ec url("./img/bars-solid.svg") no-repeat center / 17px !important;
   position: absolute;
-  right: -71px;
+  right: -42px;
   height: 40px;
-  width: 50px !important;
+  width: 34px !important;
+}
+
+.wrapper-listaAdress {
+  transition:all 200ms;
+  width: 210px;
+}
+
+.wrapper-listaAdress.aberto {
+    width: 0;
+}
+.wrapper-listaAdress.aberto ul,
+.wrapper-listaAdress.aberto form{
+    padding: 0;
+    overflow: hidden;
 }
