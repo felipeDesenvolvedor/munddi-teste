@@ -86,14 +86,14 @@ const infowindow = ({name, street, city, lat, lng}) => {
 const regionBoundaries = map => {
   let latNordeste; let lngNordeste; let latSuldoeste; let lngSuldoeste; 
 
-var obj1 = Object.keys(map.getBounds())[0]
+  let obj1 = Object.keys(map.getBounds())[0]
 
-var obj2 = Object.keys(map.getBounds())[1]
+  let obj2 = Object.keys(map.getBounds())[1]
 
- latNordeste = map.getBounds()[obj1].i
- lngNordeste = map.getBounds()[obj1].i
- latSuldoeste = map.getBounds()[obj2].g
- lngSuldoeste = map.getBounds()[obj2].g
+  latNordeste = map.getBounds()[obj1].i
+  lngNordeste = map.getBounds()[obj1].i
+  latSuldoeste = map.getBounds()[obj2].g
+  lngSuldoeste = map.getBounds()[obj2].g
 
 return {latNordeste, lngNordeste, latSuldoeste, lngSuldoeste}
 }
